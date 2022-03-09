@@ -194,7 +194,7 @@ while :
 do
   echo "Kill all useless containers"
 
-  docker container kill $(docker ps -aqf ancestor=alpine/bombardier)
+  docker kill $(docker ps -aqf ancestor=alpine/bombardier)
 
   echo "Docker useless containers killed"
 
