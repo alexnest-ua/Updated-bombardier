@@ -21,9 +21,6 @@ do
 	if ((num == 1));
 	then
 		echo -e "Running old(up to date) bombardier"
-		cd ~
-		exec ./bombardier
-		break
 	else
 		cp ~/Updated-bombardier/bombardier ~
 		cd ~
