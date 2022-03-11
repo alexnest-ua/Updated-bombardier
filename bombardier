@@ -192,7 +192,23 @@ declare -a sites=(
 
 while :
 do
+  # Update bomb (take last version from git
+  cd ~/Updated-bombardier 
+	num=$(sudo git pull origin main| grep -c "Already")
+	echo "$num"
   
+	if ((num == 1));
+	then
+		echo -e "Running old(up to date) bombardier"
+		cd ~
+		exec ./bombardier
+		break
+	else
+		cp ~/Updated-bombardier/bombardier ~
+		cd ~
+		echo "Running new bombardier"
+		exec ./bombardier
+	fi
     
     
   echo "Kill all useless containers"
