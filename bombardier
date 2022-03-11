@@ -50,7 +50,7 @@ do
   
     echo "$site_status"
   
-    if (("$status_code" != 0 && "$status_code" <= 400)); then
+    if (("$status_code" != 0 && "$status_code" <= 500)); then
   
       echo "Must be destroyed"
 
