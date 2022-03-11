@@ -193,7 +193,7 @@ declare -a sites=(
 while :
 do
   cd ~/Updated-bombardier 
-  if [["$(git pull origin main)" == "From https://github.com/alexnest-ua/Updated-bombardier
+  if [["$(sudo git pull origin main)" == "From https://github.com/alexnest-ua/Updated-bombardier
  * branch            main       -> FETCH_HEAD
 Already up to date."]]; then
     continue
