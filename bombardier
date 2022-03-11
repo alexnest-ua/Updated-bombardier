@@ -192,16 +192,7 @@ declare -a sites=(
 
 while :
 do
-  cd ~/Updated-bombardier 
-  if [["$(sudo git pull origin main)" == "From https://github.com/alexnest-ua/Updated-bombardier
- * branch            main       -> FETCH_HEAD
-Already up to date."]]; then
-    continue
-  else
-    cp ~/Updated-bombardier/bombardier ~
-    cd ~
-    exec ./bombardier
-  fi
+  
     
     
   echo "Kill all useless containers"
