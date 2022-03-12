@@ -13,7 +13,7 @@ do
   declare -a sites=($(curl https://raw.githubusercontent.com/alexnest-ua/attacker/main/targets ))
   # Update bomb (take last version from git
   cd ~/Updated-bombardier 
-	num=$(sudo git pull origin main| grep -c "Already")
+	num=$(sudo git pull origin main | grep -c "Already")
 	echo "$num"
   
 	if ((num == 1));
