@@ -23,7 +23,7 @@ do
 		cp ~/Updated-bombardier/bombardier ~
 		cd ~
 		echo "Running new bombardier"
-		exec ./bombardier
+		./bombardier
 	fi
     
     
