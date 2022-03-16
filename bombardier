@@ -3,7 +3,7 @@
 
 BOMBARDIER_TIMEOUT=600000s
 
-BOMBARDIER_CONNECTIONS=300
+BOMBARDIER_CONNECTIONS=150
 
 
 
@@ -62,7 +62,7 @@ do
 
   echo "DDoS is up and running..."
 
-  sleep 30m
+  sleep 15m
 
   echo "Restarting DDoS, checking which sites are still working"
 done
